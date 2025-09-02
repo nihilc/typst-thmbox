@@ -3,7 +3,6 @@
 #import "util.typ"
 
 #let thm-counter = counter("thmbox")
-#let sans-fonts = ("New Computer Modern Sans",)
 
 /// This function initialized the thmbox package
 /// to work in the current document.
@@ -67,12 +66,9 @@
 /// - title (content): A title for what the box is about. For example, "Vector Space" or "Euler's Identity"
 /// - numbering (none | string | function): A numbering string or function for how the number of this box should be displayed (also applies for references). Can be `none` for unnumbered boxes
 /// - counter (counter): The counter to use. Must be initialized with `#show: sectioned-counter(...)`
-/// - sans (boolean): If the body should be using a sans-serif font (which can be changed using the `sans-fonts` parameter)
 /// - fill (none | color): The background color of the box
 /// - body (content): The body of the box
 /// - bar-thickness (length): The thickness of the colored bar
-/// - sans-fonts (array): What fonts to use in the body if `sans` is true
-/// - title-fonts (array): What fonts should be used in the title bar.
 /// - rtl (boolean): Whether the box should be using a right-to-left layout.
 /// - args (arguments): 0-3 positional parameters. Correspond to `body`, `title`, and `variant` (from last to first)
 /// -> content
@@ -83,13 +79,10 @@
   title: none,
   numbering: "1.1",
   counter: thm-counter,
-  sans: true,
   fill: none,
   body: [],
   // Advanced styling
   bar-thickness: 3pt,
-  sans-fonts: sans-fonts,
-  title-fonts: sans-fonts,
   title-separator: h(1fr),
   rtl: false,
   // For easy positional args
@@ -145,7 +138,7 @@
       // Title bar
       #if variant != none or title != none {
         block(above: 0em, below: 1.2em, sticky: true)[
-          #set text(font: title-fonts, color, weight: "bold")
+          #set text(color, weight: "bold")
           #let counter-display = if numbering != none {
             " "
             context std.numbering(numbering, ..(counter.get()))
@@ -165,12 +158,7 @@
         spacing: 0em,
         width: 100%,
       )[
-        #if sans [
-          #set text(font: sans-fonts)
-          #body
-        ] else [
-          #body
-        ]
+        #body
       ]
     ]
   ]

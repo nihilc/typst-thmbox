@@ -145,10 +145,6 @@ As set rules don't work with user-defined functions, a similar effect can be ach
 
 ---
 
-The recommended font for documents using this package is New Computer Modern (shipped with Typst).
-
-The recommended sans-serif font (can be changed with the `sans-fonts` and `title-fonts` parameter) is New Computer Modern Sans (download at [CTAN](https://ctan.org/pkg/newcomputermodern))
-
 By default, thmboxes don't break across pages. To enable that, you can use the rule `#show figure.where(kind: "thmbox"): set block(breakable: true)`. Other `set` and `show` rules for figures can be used with thmboxes as well, as figures are used under the hood.
 
 ## Installation
