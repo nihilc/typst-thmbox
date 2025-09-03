@@ -16,7 +16,7 @@
 #let thmbox-init(counter-level: 2) = doc => {
   // This is needed to make the counters work. If this is not
   // wanted, use `counter-level` 1.
-  set heading(numbering: "1.1")
+  set heading(numbering: "1.")
 
   show ref: it => if (
     it.element != none
@@ -82,7 +82,7 @@
   fill: none,
   body: [],
   // Advanced styling
-  bar-thickness: 3pt,
+  bar-thickness: 2pt,
   title-separator: h(1fr),
   rtl: false,
   // For easy positional args
