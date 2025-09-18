@@ -109,7 +109,7 @@ And thank you to all who already did!
     "ca": "Demostració del",
     "de": "Beweis von",
     "fr": "Démonstration du",
-    "es": "Demostración del",
+    "es": "Demostración de",
   ),
 )
 
