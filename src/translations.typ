@@ -63,7 +63,7 @@ And thank you to all who already did!
     "es": "Observación",
   ),
   "note": (
-    "en": "Note", 
+    "en": "Note",
     "ca": "Nota",
     "de": "Notiz",
     "fr": "Note",
@@ -84,40 +84,40 @@ And thank you to all who already did!
     "es": "Algoritmo",
   ),
   "claim": (
-    "en": "Claim", 
+    "en": "Claim",
     "ca": "Afirmació",
     "de": "Behauptung",
     "fr": "Assertion",
     "es": "Afirmación",
   ),
   "axiom": (
-    "en": "Axiom", 
+    "en": "Axiom",
     "ca": "Axioma",
     "de": "Axiom",
     "fr": "Axiome",
     "es": "Axioma",
   ),
   "proof": (
-    "en": "Proof", 
+    "en": "Proof",
     "ca": "Demostració",
-    "de": "Beweis", 
-    "fr": "Démonstration", 
+    "de": "Beweis",
+    "fr": "Démonstration",
     "es": "Demostración",
   ),
   "proof-of": (
-    "en": "Proof of", 
+    "en": "Proof of",
     "ca": "Demostració del",
-    "de": "Beweis von", 
-    "fr": "Démonstration du", 
+    "de": "Beweis von",
+    "fr": "Démonstration du",
     "es": "Demostración del",
-  )
+  ),
 )
 
 /* End of translations */
 
-/// 
 ///
-/// - key (): 
+///
+/// - key ():
 /// -> str
 #let variant(key) = {
   let lang-dict = variants.at(key, default: key)
@@ -132,3 +132,4 @@ And thank you to all who already did!
 // This is currently useless, as automatic rtl
 // is not implemented in this package
 #let rtl-list = ("ar",)
+
